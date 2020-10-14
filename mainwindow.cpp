@@ -12,8 +12,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
 }
 
+    //Ägyptische Metode
 
-    //Ägyptische Methode
 void MainWindow::on_pushButton_Multi_clicked()
 {
     QString xtext =ui->lineEdit_x->text();
@@ -30,21 +30,37 @@ void MainWindow::on_pushButton_Multi_clicked()
     }
 
     for(int i = 0; i < links.size(); i++){
-        if(links.at(i) % 2 != 0){
-
-      double  Ergbnis = Ergbnis + rechts.at(i);
+        if(links.at(i) % 2 != 0){        
+      double  Ergbnis = Ergbnis + rechts.at(i); // opt
       QString resultString = "";
-    ui->label_MalShow->setText(resultString.setNum(Ergbnis));
-    }
- }
-}
+      QVector<QString> resultS;
 
+      ui->label_MalShow->setText(resultString.setNum(Ergbnis));
+
+    }
+        //um Methode zu anschauen
+        QString linksS = "";
+        for(int i = 0; i < links.size(); i++){
+            linksS += QString::number(links.at(i))+" ";
+        }
+
+        QString rechtS = "";
+        for(int i = 0; i < rechts.size(); i++){
+            rechtS += QString::number(rechts.at(i))+" ";
+        }
+
+        QString linksAndrechts ="A  : " +linksS +"\n" + "B  : "+rechtS;
+
+        ui->label_Methodeshow->setText(linksAndrechts);
+    }
+}
 
 void MainWindow::on_pushButton_clear_clicked()
 {
      ui->lineEdit_x->setText("");
      ui->lineEdit_y->setText("");
      ui->label_MalShow->setText("Danke..");
+     ui->label_Methodeshow->setText("");
 }
 
 void MainWindow::ueber_clicked_About()
@@ -57,12 +73,7 @@ void MainWindow::ueber_clicked_info()
     QMessageBox::about(this ,"About"," infos unter:  \n hello@natouf.de  ");
 }
 
-
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-
-
-
