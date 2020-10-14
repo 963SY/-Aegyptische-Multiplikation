@@ -12,6 +12,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
 }
 
+
+    //Ägyptische Methode
 void MainWindow::on_pushButton_Multi_clicked()
 {
     QString xtext =ui->lineEdit_x->text();
@@ -54,6 +56,7 @@ void MainWindow::ueber_clicked_info()
 {
     QMessageBox::about(this ,"About"," infos unter:  \n hello@natouf.de  ");
 }
+
 
 MainWindow::~MainWindow()
 {
