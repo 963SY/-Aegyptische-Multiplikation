@@ -8,13 +8,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->setStyleSheet("{background-image: url(:/images/Egyptian_.png);}");
     connect(ui->actionAbout, SIGNAL(triggered(bool)), this, SLOT(ueber_clicked_About()));
     connect(ui->actioninfo, SIGNAL(triggered(bool)), this, SLOT(ueber_clicked_info()));
 
-   // this->setStyleSheet("color: white; background-color: White; selection-color: red;"
-   // "QPushButton#pushButton_clear{ background-color: yellow }");
-    //Qpus->setStyleSheet("QPushButton#pushButton_clear{ background-color: yellow }");
 }
 
 void MainWindow::on_pushButton_Multi_clicked()
@@ -34,9 +30,7 @@ void MainWindow::on_pushButton_Multi_clicked()
 
     for(int i = 0; i < links.size(); i++){
         if(links.at(i) % 2 != 0){
-    //  std::cout << links.at(i) << " " << rechts.at(i) << std::endl;
-      //      QString sesultString = "";
-        //     ui->label_Methodeshow->setText(sesultString.setNum(links.at(i)));
+
       double  Ergbnis = Ergbnis + rechts.at(i);
       QString resultString = "";
     ui->label_MalShow->setText(resultString.setNum(Ergbnis));
