@@ -1,1 +1,1 @@
-# -gyptische-Multiplikation
+# -Aegyptische-Multiplikation
